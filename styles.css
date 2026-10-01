@@ -811,3 +811,8 @@ input[type=range].rng::-moz-range-thumb{width:20px;height:20px;border-radius:50%
 .time{white-space:nowrap}
 @media (max-width:640px){#pvHr{display:none}.player__ex{bottom:128px}.ctrl{gap:8px}.time{font-size:12px}}
 @media (max-width:420px){.btn{white-space:normal;text-align:center;height:auto;min-height:var(--h);padding-block:12px}}
+/* dialogs live in the top layer, above the custom cursor — show the native cursor there */
+html.lock.has-cursor,html.lock.has-cursor *{cursor:auto!important}
+html.lock.has-cursor :is(button,a,label,[role=button],[role=radio],select,input[type=range]){cursor:pointer!important}
+html.lock.has-cursor input:not([type=range]){cursor:text!important}
+html.lock .cursor{display:none}
