@@ -816,3 +816,34 @@ html.lock.has-cursor,html.lock.has-cursor *{cursor:auto!important}
 html.lock.has-cursor :is(button,a,label,[role=button],[role=radio],select,input[type=range]){cursor:pointer!important}
 html.lock.has-cursor input:not([type=range]){cursor:text!important}
 html.lock .cursor{display:none}
+
+/* ===== website mode: lighter, no app chrome ===== */
+html{scroll-padding-top:72px}
+.grain,.cursor,.dock{display:none!important}
+body{padding-bottom:0!important}
+.nav__links a{padding:10px 11px;font-size:13.5px}
+.burger{display:none}
+.toast{bottom:24px!important}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gut)}
+.steps li{padding-top:var(--s5);border-top:1px solid var(--line2)}
+.steps .big{font-size:clamp(64px,8vw,120px);color:var(--p);display:block;margin-bottom:var(--s5)}
+.steps h3{font-size:var(--fs-h3);margin-bottom:var(--s3)}
+.steps p{color:var(--muted);max-width:32ch}
+.faq{max-width:860px}
+.faq details{border-top:1px solid var(--line2);padding:22px 0}
+.faq details:last-child{border-bottom:1px solid var(--line2)}
+.faq summary{list-style:none;cursor:pointer;font:600 clamp(18px,2vw,26px) var(--f-sans);letter-spacing:-.02em;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--p);font-size:1.4em;line-height:1;transition:transform var(--fast)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--muted);margin-top:14px;max-width:60ch}
+.hero__fig{pointer-events:none}
+@media (max-width:1180px){.nav__links a{padding:10px 8px;font-size:12.5px}}
+@media (max-width:1020px){
+  .nav__links{display:none}
+  .burger{display:grid}
+  .nav .btn--s{display:inline-flex!important}
+  .nav__links.open{display:flex;position:fixed;top:68px;left:12px;right:12px;flex-direction:column;padding:10px;border-radius:20px;background:rgba(13,17,14,.98);border:1px solid var(--line2);box-shadow:var(--sh2)}
+  .nav__links.open a{padding:14px 16px;font-size:16px;color:var(--white)}
+}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}

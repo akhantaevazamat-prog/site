@@ -77,57 +77,32 @@
 <header class="nav" id="nav">
   <a href="#top" class="logo" aria-label="DENSAM — басты бет"><i></i>DENSAM</a>
   <nav class="nav__links" id="navlinks" aria-label="Негізгі навигация">
-    <a href="#story" data-nav="story">Өнім</a>
-    <a href="#workouts" data-nav="workouts">Жаттығулар</a>
-    <a href="#nutrition" data-nav="nutrition">Тамақтану</a>
-    <a href="#coach" data-nav="coach">AI Coach</a>
-    <a href="#progress" data-nav="progress">Прогресс</a>
-    <span class="nav__ind" id="navind"></span>
+    <a href="#features">Мүмкіндіктер</a><a href="#how">Қалай жұмыс істейді</a><a href="#coach">AI Coach</a><a href="#workouts">Жаттығулар</a><a href="#nutrition">Тамақтану</a><a href="#calc">Калькулятор</a><a href="#faq">FAQ</a>
   </nav>
-  <div class="nav__r">
-    <button class="kbd" id="openCmd" aria-label="Іздеуді ашу (Ctrl K)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Іздеу <kbd id="kbdHint">⌘ K</kbd></button>
-    <button class="icon-btn" id="openCmd2" aria-label="Іздеу" style="display:none"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
-    <button class="icon-btn" id="bell" aria-label="Хабарламалар" aria-expanded="false" aria-controls="notif"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 6 2 7 2 7H4s2-1 2-7"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span class="badge-dot" id="bellDot"></span></button>
-    <button class="btn btn--p btn--s" data-open-ob>Бастау <span class="ar">→</span></button>
-  </div>
+  <div class="nav__r"><a class="btn btn--p btn--s" href="#coach">Бастау <span class="ar">→</span></a><button class="icon-btn burger" id="burger" aria-label="Мәзір" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg></button></div>
 </header>
-
-<aside class="pop" id="notif" aria-label="Хабарламалар орталығы">
-  <div class="pop__h"><span class="meta">Хабарламалар</span><button id="clearNt">Барлығын тазалау</button></div>
-  <div id="ntList"></div>
-</aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<!-- mobile dock -->
-<nav class="dock" aria-label="Мобильді навигация">
-  <a href="#top" data-dock="top" class="on"><span class="i">⌂</span>Home</a>
-  <a href="#progress" data-dock="progress"><span class="i">◉</span>Progress</a>
-  <a href="#workouts" class="plus" data-dock="workouts" aria-label="Workout"><span class="i">＋</span>Workout</a>
-  <a href="#nutrition" data-dock="nutrition"><span class="i">◒</span>Nutrition</a>
-  <button id="dockProfile" data-dock="profile"><span class="i">☻</span>Profile</button>
-</nav>
 
 <main id="main">
 <!-- ============ 01 HERO ============ -->
 <section class="hero" id="top" aria-labelledby="h1">
-  <div class="hero__bg" data-depth="6"></div>
-  <div class="hero__glow" data-depth="14"></div>
-  <div class="hero__fig" data-depth="26" role="img" aria-label="DENSAM: жүгіріп бара жатқан спортшының жасыл жарықпен боялған силуэті және жүрек соғысын бейнелейтін 3D форма">
+  <div class="hero__bg"></div>
+  <div class="hero__glow"></div>
+  <div class="hero__fig" role="img" aria-label="DENSAM: жүгіріп бара жатқан спортшының жасыл жарықпен боялған силуэті және жүрек соғысын бейнелейтін 3D форма">
     <svg viewBox="0 0 600 760" aria-hidden="true"><use href="#runner"/></svg>
-    <div class="hero__core" id="coreWrap"><canvas id="core" width="600" height="600" aria-hidden="true"></canvas></div>
-  </div>
+      </div>
   <div class="hero__txt">
     <div class="meta rv"><b>DENSAM / 01</b> &nbsp;—&nbsp; Денсаулық және фитнес</div>
     <h1 id="h1" class="rv" style="--d:1"><span>Денеңді өзгерт<span class="dot">.</span></span><span>Өміріңді өзгерт<span class="dot">.</span></span></h1>
     <p class="hero__sub rv" style="--d:2">Жаттығу. Тамақтану. Ұйқы.<br>Барлығы бір жерде.</p>
     <p class="hero__def rv" style="--d:2">DENSAM — жаттығуды, тамақтануды, ұйқыны және recovery-ді біріктіретін жеке AI Coach қосымшасы.</p>
     <div class="hero__cta rv" style="--d:3">
-      <button class="btn btn--p" data-open-ob data-magnetic>Жеке жоспарымды бастау <span class="ar">→</span></button>
-      <a class="btn btn--g" href="#story" data-magnetic>Қалай жұмыс істейді</a>
+      <a class="btn btn--p" href="#coach">Жеке жоспарымды бастау <span class="ar">→</span></a>
+      <a class="btn btn--g" href="#how">Қалай жұмыс істейді</a>
     </div>
   </div>
 
-  <aside class="hero__dash" data-depth="40" aria-label="Бүгінгі денсаулық көрсеткіштері">
+  <aside class="hero__dash" aria-label="Бүгінгі денсаулық көрсеткіштері">
     <div class="dash__h"><span class="meta"><b>TODAY</b></span><span class="meta live">Live</span></div>
     <div class="dash__g">
       <div class="dash__c"><span class="meta">❤️ Heart Rate</span><strong><span id="hrV">72</span><small>BPM</small></strong></div>
@@ -144,37 +119,33 @@
   </div>
 </section>
 
-<!-- ============ 02 CINEMATIC STORY ============ -->
-<section class="story" id="story" data-scene="0" aria-label="DENSAM тарихы: төрт сахна">
-  <div class="story__stage">
-    <div class="story__beam"></div>
-    <div class="story__bars"></div>
-    <div class="story__sc meta"><b>DENSAM / 02</b> — Story</div>
-    <div class="story__fig" role="img" aria-label="Спортшының силуэті жасыл жарықпен көрсетіледі"><svg viewBox="0 0 600 760" aria-hidden="true"><use href="#runner"/></svg></div>
-    <span class="story__lab" style="--x:-34vmin;--y:-26vmin;--i:0"><b>01</b> Movement</span>
-    <span class="story__lab" style="--x:34vmin;--y:-14vmin;--i:1"><b>02</b> Nutrition</span>
-    <span class="story__lab" style="--x:-30vmin;--y:20vmin;--i:2"><b>03</b> Sleep</span>
-    <span class="story__lab" style="--x:30vmin;--y:26vmin;--i:3"><b>04</b> Recovery</span>
-    <div class="story__ring" aria-hidden="true">
-      <svg class="gauge" viewBox="0 0 200 200"><circle class="gauge__track" cx="100" cy="100" r="92" pathLength="100"/><circle class="gauge__bar" cx="100" cy="100" r="92" pathLength="100"/></svg>
+<section class="sec" id="features" aria-labelledby="plH">
+  <div class="wrap">
+    <div class="sec__head rv"><span class="meta"><b>DENSAM</b> — Не істейді</span><h2 id="plH">Төрт тірек.<br>Бір жүйе.</h2><p>DENSAM — денсаулыққа арналған сайт және қосымша: жаттығу, тамақтану, ұйқы және әдеттер бір жерде.</p></div>
+    <div class="pil">
+      <article class="pl rv"><span class="n">01</span><h3>ҚОЗҒАЛЫС</h3><p><span>Күш / Cardio / HIIT / Yoga</span>Әр деңгейге сай жаттығулар.</p></article>
+      <article class="pl rv"><span class="n">02</span><h3>ТАМАҚТАНУ</h3><p><span>Calories / Macros / Recipes</span>Диета емес — өзіңе сай жүйе.</p></article>
+      <article class="pl rv"><span class="n">03</span><h3>ҰЙҚЫ</h3><p><span>Sleep / Recovery</span>Күш — демалу кезінде жиналады.</p></article>
+      <article class="pl rv"><span class="n">04</span><h3>ӘДЕТТЕР</h3><p><span>Water / Steps / Consistency</span>Нәтиже — күнделікті таңдаулардан.</p></article>
     </div>
-    <div class="story__num" aria-hidden="true"><div class="meta"><b>DENSAM SCORE</b></div><div class="big" id="storyNum">0</div></div>
-    <div class="story__side meta" aria-hidden="true"><span>01</span><span>02</span><span>03</span><span>04</span></div>
-    <div class="story__cap">
-      <div data-c="0"><span class="meta"><b>Сахна 01</b> — Бастама</span><h2>Әр күн —<br>жаңа мүмкіндік.</h2><p>Төмен түс. Тарих жалғасады.</p></div>
-      <div data-c="1"><span class="meta"><b>Сахна 02</b> — Адам</span><h2>Сен — тек бұлшықет емес.<br>Сен — жүйе.</h2><p>Қозғалыс, тамақтану, ұйқы және recovery бір-бірімен байланысты.</p></div>
-      <div data-c="2"><span class="meta"><b>Сахна 03</b> — Деректер</span><h2>Барлығы бір<br>санға жиналады.</h2><p>DENSAM күн сайынғы деректеріңді бір көрсеткішке біріктіреді.</p></div>
-      <div data-c="3"><span class="meta"><b>Сахна 04</b> — Нәтиже</span><h2>Бұл тек сан емес.<br>Бұл сенің күнделікті таңдауларың.</h2></div>
-    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="how" aria-labelledby="howH">
+  <div class="wrap">
+    <div class="sec__head rv"><span class="meta"><b>DENSAM</b> — Қалай жұмыс істейді</span><h2 id="howH">Үш қарапайым қадам.</h2></div>
+    <ol class="steps">
+      <li class="rv"><span class="big">1</span><h3>Мақсатыңды айт</h3><p>AI Coach-қа мақсатыңды жаз: арықтау, бұлшықет жинау немесе энергия.</p></li>
+      <li class="rv" style="--d:1"><span class="big">2</span><h3>Жоспар ал</h3><p>Жаттығу, тамақтану және демалу жоспары сенің деңгейіңе бейімделеді.</p></li>
+      <li class="rv" style="--d:2"><span class="big">3</span><h3>Прогресті көр</h3><p>DENSAM Score мен графиктер әр күнгі өзгерісті көрсетеді.</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- ============ 03 TODAY: plan + score + briefing ============ -->
 <section class="sec" id="today" aria-labelledby="todayH">
   <div class="wrap">
-    <div class="sec__head rv"><span class="meta"><b>DENSAM / 03</b> — Сенің күнің</span><h2 id="todayH">Бүгінгі dashboard</h2></div>
-
-    <div class="plan rv" id="plan" aria-live="polite"></div>
+    <div class="sec__head rv"><span class="meta"><b>DENSAM Score</b> — Сенің күнің</span><h2 id="todayH">Бір сан —<br>бүкіл күнің.</h2><p>Қозғалыс, тамақтану, ұйқы, recovery және тұрақтылық бір көрсеткішке жиналады.</p></div>
 
     <div class="score">
       <div class="score__gauge rv" id="scoreView">
@@ -199,7 +170,7 @@
         <div><span class="meta">Recovery</span><div class="big"><span data-count="87">0</span><span class="unit" style="font-size:.3em">%</span></div></div>
         <div><span class="meta">Sleep</span><div class="big">7<span class="unit" style="font-size:.3em">h</span> 42<span class="unit" style="font-size:.3em">m</span></div></div>
       </div>
-      <div class="rec rv"><div><span class="meta">AI recommendation</span><p>Бүгін күш жаттығуына қолайлы күн.</p></div><button class="btn btn--p" data-goto="workouts" data-start-wo data-magnetic>Жаттығуды бастау <span class="ar">→</span></button></div>
+      <div class="rec rv"><div><span class="meta">AI recommendation</span><p>Бүгін күш жаттығуына қолайлы күн.</p></div><a class="btn btn--p" href="#workouts">Жаттығуды көру <span class="ar">→</span></a></div>
     </div>
   </div>
 </section>
@@ -248,95 +219,11 @@
           <div><span class="meta">Difficulty</span><strong id="woLvl"></strong></div>
           <div><span class="meta">Calories</span><strong id="woKcal"></strong></div>
         </div>
-        <div><button class="btn btn--p" id="woStart" data-magnetic>Жаттығуды бастау <span class="ar">→</span></button></div>
+        <div><button class="btn btn--p" id="woStart">Жаттығу жоспарын көру <span class="ar">→</span></button></div>
       </article>
       <div class="wk__list rv" style="--d:2" id="woList" role="list"></div>
     </div>
 
-    <div class="player" id="player">
-      <div class="player__v" id="pv">
-        <div class="scene"></div>
-        <div class="fig" aria-hidden="true"><svg viewBox="0 0 600 760"><use href="#runner"/></svg></div>
-        <div class="player__top"><span class="meta"><b>WORKOUT PLAYER</b> · <span id="pvName">Full Body</span></span><span class="meta live" id="pvLive">Pause</span></div>
-        <div class="player__ex"><span class="meta">Қазір</span><h4 id="pvEx">Squat</h4></div>
-        <div class="player__bar">
-          <div class="seek"><div class="seek__t"></div><div class="seek__f" id="seekF"></div><div id="seekM"></div><input type="range" id="seek" min="0" max="2100" value="763" aria-label="Жаттығу барысы"></div>
-          <div class="ctrl">
-            <span class="time" id="pvTime">12:43 / 35:00</span>
-            <div class="ctrl__m">
-              <button class="cb" id="back10" aria-label="10 секунд артқа">−10</button>
-              <button class="cb cb--play" id="playBtn" aria-label="Ойнату"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="playIc" d="M8 5v14l11-7z"/></svg></button>
-              <button class="cb" id="fwd10" aria-label="10 секунд алға">+10</button>
-              <button class="cb" id="nextBtn" aria-label="Келесі жаттығу"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14l9-7zM17 5h2v14h-2z"/></svg></button>
-            </div>
-            <span class="meta" id="pvHr">❤ 128 BPM</span>
-          </div>
-        </div>
-      </div>
-      <div class="player__s">
-        <div class="nx"><span class="meta"><b>Келесі жаттығу</b></span><h4 id="nxName">Squat — 45 sec</h4></div>
-        <div class="q" id="queue" aria-label="Жаттығу тізімі"></div>
-      </div>
-    </div>
-
-    <div class="adapt rv" id="adaptive">
-      <div class="adapt__l">
-        <span class="meta"><b>Adaptive Workout</b> · AI жоспарды өзгертеді</span>
-        <h3 id="adH">Кеше аяқ жаттығуы ауыр болды.</h3>
-        <p class="mut" id="adSub">Сондықтан бүгінгі жоспар автоматты түрде бейімделді.</p>
-        <div class="slider"><label for="load">Кешегі аяқ жаттығуының ауырлығы <b id="loadV">8 / 10</b></label><input class="rng" type="range" id="load" min="1" max="10" value="8"></div>
-      </div>
-      <div class="adapt__r">
-        <div class="delta"><span class="big" id="adD">−15%</span><span class="meta">Lower body<br>intensity</span></div>
-        <div class="cmp"><div class="pl"><span>Жоспар</span><div class="bar"><i style="--w:100%"></i></div><b id="adP">100%</b></div><div class="adj"><span>Бүгін</span><div class="bar"><i id="adBar" style="--w:85%"></i></div><b id="adB">85%</b></div></div>
-        <div class="why"><b>Неліктен?</b><p id="adWhy">Recovery score төмен болғандықтан.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 06 BODY ============ -->
-<section class="sec sec--alt" id="body" aria-labelledby="bodyH">
-  <div class="wrap">
-    <div class="sec__head rv"><span class="meta"><b>DENSAM / 06</b> — Анатомия</span><h2 id="bodyH">Денеңді<br>таңда.</h2></div>
-    <div class="body">
-      <div class="body__fig rv">
-        <svg class="body__svg" id="bodySvg" data-side="front" viewBox="0 0 400 780" role="group" aria-label="Интерактивті дене моделі">
-          <defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16201a"/><stop offset="1" stop-color="#0b0f0c"/></linearGradient></defs>
-          <ellipse cx="200" cy="760" rx="120" ry="12" fill="rgba(183,255,60,.06)"/>
-          <g class="base" fill="url(#gb)">
-            <circle cx="200" cy="72" r="36"/><rect x="186" y="104" width="28" height="34" rx="10"/>
-            <path d="M140 142 Q200 120 260 142 L252 262 Q248 330 244 404 L156 404 Q152 330 148 262 Z"/>
-          </g>
-          <g data-zones>
-            <circle class="zone" data-zone="shoulder" cx="128" cy="160" r="30" tabindex="0" role="button" aria-label="Иық"/>
-            <circle class="zone" data-zone="shoulder" cx="272" cy="160" r="30" tabindex="-1" aria-hidden="true"/>
-            <path class="zone" data-zone="arm" tabindex="0" role="button" aria-label="Қол" d="M104 196 Q88 202 84 236 L70 336 Q68 358 88 360 Q104 360 106 344 L124 236 Q126 204 104 196Z"/>
-            <path class="zone" data-zone="arm" aria-hidden="true" tabindex="-1" transform="matrix(-1 0 0 1 400 0)" d="M104 196 Q88 202 84 236 L70 336 Q68 358 88 360 Q104 360 106 344 L124 236 Q126 204 104 196Z"/>
-            <path class="zone" data-zone="leg" tabindex="0" role="button" aria-label="Аяқ" d="M156 410 L198 410 L194 566 L188 742 Q188 752 176 752 L158 752 Q148 752 150 740 L146 566 Z"/>
-            <path class="zone" data-zone="leg" aria-hidden="true" tabindex="-1" transform="matrix(-1 0 0 1 400 0)" d="M156 410 L198 410 L194 566 L188 742 Q188 752 176 752 L158 752 Q148 752 150 740 L146 566 Z"/>
-            <g class="ft">
-              <path class="zone" data-zone="chest" tabindex="0" role="button" aria-label="Кеуде" d="M152 152 Q200 140 248 152 L246 238 Q200 256 154 238 Z"/>
-              <rect class="zone" data-zone="abs" tabindex="0" role="button" aria-label="Пресс" x="166" y="258" width="68" height="140" rx="18"/>
-              <path class="scanl" d="M200 262v132M170 296h60M170 330h60M170 364h60" fill="none" style="pointer-events:none"/>
-            </g>
-            <g class="bk">
-              <path class="zone" data-zone="back" tabindex="0" role="button" aria-label="Арқа" d="M150 146 Q200 128 250 146 L248 262 Q244 340 236 400 L164 400 Q156 340 152 262 Z"/>
-              <path class="scanl" d="M200 140v260M176 200q24 14 48 0M172 260q28 14 56 0M170 320q30 14 60 0" fill="none" style="pointer-events:none"/>
-            </g>
-          </g>
-        </svg>
-        <div class="body__tog"><button class="chip" id="flipBody" aria-pressed="false">↺ Артқы жағы</button></div>
-      </div>
-      <div class="body__info zinfo" id="zinfo" aria-live="polite">
-        <div class="zones" id="zones" role="tablist" aria-label="Бұлшықет топтары"></div>
-        <span class="meta"><b>Зона</b></span>
-        <h3 id="zName">Кеуде</h3>
-        <div class="cnt"><strong id="zCnt">12</strong> жаттығу</div>
-        <div class="lv"><div class="lv__bar" id="zBar"><i style="flex:4"></i><i style="flex:5"></i><i style="flex:3"></i></div><div class="lv__l meta"><span>Beginner</span><span>Intermediate</span><span>Advanced</span></div></div>
-        <button class="btn btn--p" id="zGo" data-magnetic>Жаттығуларды көру <span class="ar">→</span></button>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -372,25 +259,6 @@
       <div class="ainu__r rv" style="--d:2" id="dishOut" aria-live="polite"><div class="ai-load"><span class="meta">Сұрақты таңда</span><span class="mut">AI сенің калория мен макро мақсатыңа сай тағам ұсынады.</span></div></div>
     </div>
 
-    <div class="scan" id="scan">
-      <div class="scan__phone rv">
-        <div class="scan__scr" id="scanScr">
-          <svg class="plate" viewBox="0 0 100 100" aria-hidden="true" style="--c1:#ffcf6b;--c2:#f4f0df;--c3:#76C93A"><use href="#plate"/></svg>
-          <div class="scan__vf"><i></i><i></i><i></i><i></i></div><div class="scan__ln"></div>
-          <div class="scan__res" id="scanRes"><span class="meta" id="scanSt">FOOD SCAN · дайын</span><div class="big"><span id="scanKcal">···</span> <span class="unit">kcal</span></div><div class="row"><span>Protein <b id="scP">···</b></span><span>Carbs <b id="scC">···</b></span><span>Fat <b id="scF">···</b></span></div></div>
-        </div>
-      </div>
-      <div class="scan__r">
-        <span class="meta rv"><b>FOOD SCAN</b> · 📷</span>
-        <h3 class="rv">Тағамды<br>сканерле.</h3>
-        <p class="rv">Камераны табаққа бағыттасаң, DENSAM калория мен макроны бағалайды. Төмендегі демода үлгі тағамды таңда.</p>
-        <div class="chips rv" id="dishChips"></div>
-        <div class="hero__cta rv"><button class="btn btn--p" id="scanBtn" data-magnetic>📷 Тағамды сканерлеу</button>
-          <label class="btn btn--g" for="scanFile" tabindex="0" id="scanFileL">Сурет жүктеу</label><input type="file" id="scanFile" class="sr" accept="image/*"></div>
-        <div class="scan__err" id="scanErr" role="alert"></div>
-        <p class="note">Бағалау шамамен және нақты мәннен ерекшеленуі мүмкін. Бұл демо-нәтиже: нақты кескінді тану модулі қосылмаған.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -474,16 +342,6 @@
         <span class="meta"><b>HABIT TRACKER</b> · осы апта</span>
         <div class="hab__grid" id="habGrid" style="margin-top:20px" role="group" aria-label="Әдеттер кестесі"></div>
       </div>
-      <div class="streak rv">
-        <span class="meta"><b>STREAK</b></span>
-        <div class="big"><span>🔥</span><span data-count="12">0</span><small>күн</small></div>
-        <p>12 күн қатарынан өз мақсатыңды орындадың.</p>
-        <div class="ms" id="ms" style="--w:78%"></div>
-      </div>
-      <div class="ach rv" style="--d:2">
-        <span class="meta"><b>ACHIEVEMENTS</b> · <span id="achCnt">3 / 6</span></span>
-        <div class="ach__g" id="achG"></div>
-      </div>
     </div>
   </div>
 </section>
@@ -519,15 +377,14 @@
   </div>
 </section>
 
-<!-- ============ 12 PILLARS ============ -->
-<section class="sec sec--alt" id="pillars" aria-labelledby="plH">
+<section class="sec sec--alt" id="faq" aria-labelledby="faqH">
   <div class="wrap">
-    <div class="sec__head rv"><span class="meta"><b>DENSAM / 12</b> — Төрт тірек</span><h2 id="plH" class="sr">Төрт тірек</h2></div>
-    <div class="pil">
-      <article class="pl rv"><span class="n">01</span><h3>ҚОЗҒАЛЫС</h3><p><span>Күш / Cardio / HIIT / Yoga</span>Әр деңгейге бейімделген жаттығулар.</p></article>
-      <article class="pl rv"><span class="n">02</span><h3>ТАМАҚТАНУ</h3><p><span>Calories / Macros / Recipes</span>Диета емес — өзіңе сай жүйе.</p></article>
-      <article class="pl rv"><span class="n">03</span><h3>ҰЙҚЫ</h3><p><span>Sleep / Recovery</span>Күш — демалу кезінде жиналады.</p></article>
-      <article class="pl rv"><span class="n">04</span><h3>ӘДЕТТЕР</h3><p><span>Water / Steps / Consistency</span>Нәтиже — күнделікті таңдаулардан.</p></article>
+    <div class="sec__head rv"><span class="meta"><b>FAQ</b></span><h2 id="faqH">Жиі<br>сұрақтар.</h2></div>
+    <div class="faq rv">
+      <details><summary>DENSAM дәрігер ме?</summary><p>Жоқ. DENSAM — ақпараттық және мотивациялық құрал, медициналық диагноз қоймайды.</p></details>
+      <details><summary>AI Coach қалай жұмыс істейді?</summary><p>Белсенділік, ұйқы, recovery және әдеттерді қарап, жалпы ұсыныс береді. Бұл сайттағы чат — демо.</p></details>
+      <details><summary>Деректерім қайда сақталады?</summary><p>Бұл демода барлығы тек сенің браузеріңде сақталады.</p></details>
+      <details><summary>Калькулятор дәл ме?</summary><p>Нәтиже шамамен және ақпараттық мақсатта берілген.</p></details>
     </div>
   </div>
 </section>
@@ -536,10 +393,10 @@
 <section class="final" id="final" aria-labelledby="finH">
   <svg class="hb-l" viewBox="0 0 1600 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30h560l20-24 24 50 22-38 14 12h260l18-20 22 44 18-22h642"/></svg>
   <div>
-    <span class="meta rv"><b>DENSAM / 13</b></span>
+    <span class="meta rv"><b>DENSAM</b></span>
     <h2 id="finH" class="rv" style="--d:1">Бүгін баста<span class="accent">.</span></h2>
     <p class="rv" style="--d:2">Кішкентай қадам.<br>Күн сайын.<br>Үлкен өзгеріс.</p>
-    <div class="rv" style="--d:3"><button class="btn btn--p" data-open-ob data-magnetic>DENSAM-ды бастау <span class="ar">→</span></button></div>
+    <div class="rv" style="--d:3"><a class="btn btn--p" href="#coach">DENSAM-ды бастау <span class="ar">→</span></a></div>
   </div>
 </section>
 </main>
@@ -547,27 +404,13 @@
 <footer class="foot">
   <div class="foot__g">
     <div class="foot__b"><span class="logo"><i></i>DENSAM</span><p>Health is a daily choice.</p></div>
-    <nav aria-label="Өнім"><span class="meta">Өнім</span><a href="#story">Өнім</a><a href="#workouts">Жаттығулар</a><a href="#nutrition">Тамақтану</a><a href="#coach">AI Coach</a><a href="#progress">Прогресс</a><a href="#faq" data-faq>FAQ</a></nav>
+    <nav aria-label="Өнім"><span class="meta">Өнім</span><a href="#features">Өнім</a><a href="#workouts">Жаттығулар</a><a href="#nutrition">Тамақтану</a><a href="#coach">AI Coach</a><a href="#progress">Прогресс</a><a href="#faq">FAQ</a></nav>
     <nav aria-label="Әлеуметтік желілер"><span class="meta">Желілер</span><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></nav>
   </div>
   <div class="foot__s"><p class="note">DENSAM медициналық қызмет емес және дәрігердің кеңесін алмастырмайды. AI ұсыныстары ақпараттық мақсатта берілген.</p><span class="meta">© 2026 DENSAM</span></div>
 </footer>
 
 <!-- ============ dialogs ============ -->
-<dialog id="ob" aria-labelledby="obQ" aria-label="Онбординг">
-  <div class="ob">
-    <div><div class="ob__top"><span class="logo"><i></i>DENSAM</span><span class="meta" id="obStep"></span><button class="btn btn--g btn--s" id="obSkip">Өткізу</button></div><div class="ob__prog"><i id="obProg"></i></div></div>
-    <div class="ob__body" id="obBody"></div>
-    <div class="ob__bot"><button class="txt" id="obBack">← Артқа</button><span class="meta">Деректер құрылғыңда ғана сақталады</span></div>
-  </div>
-</dialog>
-<dialog id="cmd" aria-label="DENSAM іздеу">
-  <div class="cmd">
-    <div class="cmd__i"><svg viewBox="0 0 24 24" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="cmdIn" placeholder="Search DENSAM…" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="cmdL" aria-label="Search DENSAM"><span class="meta">ESC</span></div>
-    <div class="cmd__l" id="cmdL" role="listbox"></div>
-    <div class="cmd__f"><span>↑↓ таңдау</span><span>↵ ашу</span><span>esc жабу</span></div>
-  </div>
-</dialog>
 <dialog id="modal" aria-label="Мәлімет"><div class="mdl" id="mdl"></div></dialog>
 
 <script src="app.js" defer></script>
